@@ -1,0 +1,44 @@
+PS C:\> New-Item -ItemType Directory C:\ -Name EvenFolder  
+ 
+PS C:\> New-Item -ItemType Directory C:\ -Name OddFolder  
+                  
+PS C:\> Set-Location C:\FolderTest1
+
+PS C:\FolderTest1> Move-item -Path File2 -Destination C:\EvenFolder
+
+PS C:\FolderTest1> Move-item -Path File4 -Destination C:\EvenFolder
+  
+PS C:\FolderTest1> Set-Location C:\FolderTest2
+
+PS C:\FolderTest2> Get-ChildItem
+
+PS C:\FolderTest2> Move-Item -Path .\File10 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Move-Item -Path .\File8 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Move-Item -Path .\File6 -Destination C:\EvenFolder
+
+PS C:\FolderTest2> Set-Location C:\EvenFolder
+
+PS C:\EvenFolder> Get-ChildItem
+
+PS C:\FolderTest1> Get-ChildItem
+                           
+PS C:\FolderTest1> Move-Item -Path File1 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Move-Item -Path File3 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Move-Item -Path File5 -Destination C:\OddFolder
+
+PS C:\FolderTest1> Set-Location -Path C:\FolderTest2
+
+PS C:\FolderTest2> Get-ChildItem 
+                          
+PS C:\FolderTest2> Move-Item -Path File7 -Destination C:\OddFolder
+
+PS C:\FolderTest2> Move-Item -Path File9 -Destination C:\OddFolder
+
+PS C:\FolderTest2> Set-Location -Path C:\OddFolder
+
+PS C:\OddFolder> Get-ChildItem
+ 
