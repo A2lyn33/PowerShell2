@@ -1,3 +1,4 @@
+```shell
 PS C:\> New-Item -ItemType Directory C:\ -Name EvenFolder  
  
 PS C:\> New-Item -ItemType Directory C:\ -Name OddFolder  
@@ -41,4 +42,4 @@ PS C:\FolderTest2> Move-Item -Path File9 -Destination C:\OddFolder
 PS C:\FolderTest2> Set-Location -Path C:\OddFolder
 
 PS C:\OddFolder> Get-ChildItem
- 
+ ```
